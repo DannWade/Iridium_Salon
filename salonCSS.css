@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+}
+
+nav, nav>ul{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+nav>ul{
+    flex-grow: .2;
+}
+
+nav>ul>li, nav>ul>li>a{
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Cinzel Decorative';
+}
+
+.cinzelPinkB{
+    border: none;
+    background-color: pink;
+    height: 20px;
+    border-radius: 3px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.cinzelPink{
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(175, 7, 35);
+    font-family:'Cinzel Decorative';
+}
+
+/* main style */
+h1{
+    margin-top: 2%;
+    font-family: 'Cinzel Decorative';
+    font-size: 5em;
+    margin-bottom: 2%;
+    padding-bottom: 0%;
+    color: rgb(53, 12, 12);
+}
+
+
+/* flexclear so that the h1 top margin is in relation to the top border of <main> */
+#flexclear{
+    display: flex;
+}
+main{
+    height: 600px;
+    background-image: url(istockphoto-1086801030-1024x1024.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+main>*{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 17%;
+    width: 50%;
+}
+
+main>section{
+    background: black;
+    color: white;
+    margin: 2% 5% 5% 15%;
+    height: fit-content;
+    width: 25%;
+    padding: 2% 3%;
+    font-size: 120%;
+
+}
+
+main>button{
+    width: fit-content;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    padding: 1% 3%;
+}
+
+main>section>button{
+    width: 70%;
+    height: 30px;
+    margin-left: 10%;
+    font-size: Xx-small;
+    padding: 1% 3%;
+}
+
+main>section em{
+    font-size:x-large;
+    font-weight: bold;
+}
+
+/* first section */
+
+i {
+    width: 50px;
+    height: 50px;
+}
+
+.fa-2xl{
+    font-size: 4em !important;
+}
+
+body main + section{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+body main + section>section{
+    flex-basis: 25%;
+    text-align: center;
+    margin: 0 1%;
+}
+
+/* second section */
+body main + section + section{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 400px;
+    background-color: rgb(217,199,195);
+    padding: 5% 2%;
+}
+
+main + section + section h2{
+    font-family: 'Cinzel Decorative';
+}
+
+#video {
+    margin: auto 1%;
+}
+
+body main + section + section > *{
+    flex-basis: 30%;
+}
+
+/* third section */
+
+.stylistfoto{
+    width: 100%;
+    border-radius: 50%;
+}
+
+body main + section + section + section{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height:400px;
+    align-items: center;
+}
+
+body main + section + section + section>*{
+    flex-basis: 30%;
+}
+
+body main + section + section + section button{
+    margin: auto;
+}
+
+/* fourth section */
+body main+section+section+section+section{
+    background-color: beige;
+    padding: 20px 0;
+}
+
+body main +section+section+section+section>*{
+    margin-left: 20%;
+    font-family: 'Cinzel Decorative';
+}
+
+body main +section+section+section+section{
+    height: 200px;
+}
+
+body main +section+section+section+section em{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* fifth section */
+body main + section+section+section+section+ h3{
+    font-family: 'Cinzel Decorative';
+    font-size: 3em;
+}
+
+#grid{
+    height: 500px;
+}
+
+body main +section+section+section+section+section{
+    text-align: center;
+    height: 300px;
+}
+
+body main +section+section+section+section+h3+section> section{
+    display: flex;
+    flex-flow: column wrap;
+    height: 140%;
+    width: 30%;
+    /* aspect-ratio: 670.12/371.2; */
+    margin-left: 5%;
+}
+
+section section section img{
+    width: 100%;
+    height: max-content;
+    padding: 3px;
+}
+
+.onethird{
+    aspect-ratio: 315.52 / 210.13;
+    border: none;
+}
+
+.twothirds{
+    aspect-ratio: 315.52 / 315.52;
+    border: none;
+}
+
+
+/* media query */
+@media all and (max-width:670px) {
+    section{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    body main{
+        height: 350px !important;
+        margin: 1px;
+    }
+
+    main section{
+        width: 50%;
+        font-size: 1em;
+    }
+    .mediaMenu{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+        align-items: center;
+    }
+    body>*:not(main,section+section+h3){
+        height: fit-content !important;
+        padding: 30px 0 !important;
+    }
+
+    /* first section */
+    .fa-2xl{
+        font-size: 2em !important;
+    }
+    i{
+        height: 25px;
+        width: 25px;
+        margin: auto;
+    }
+
+    body main + section{
+        height: 400px !important;
+    }
+    /* second section */
+}

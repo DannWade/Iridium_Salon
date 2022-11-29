@@ -129,8 +129,9 @@ body main + section + section{
     padding: 5% 2%;
 }
 
-main + section + section h2{
+main + section + section h2,.readmore{
     font-family: 'Cinzel Decorative';
+    text-decoration: none;
 }
 
 #video {

@@ -210,7 +210,7 @@ body main +section+section+section+section+h3+section> section{
 
 section section section img{
     width: 100%;
-    height: max-content;
+    /* height: max-content; */
     padding: 3px;
 }
 
@@ -272,5 +272,22 @@ section section section img{
     body main + section{
         height: 400px !important;
     }
-    /* second section */
+    /* video section */
+    .videosection{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .videosection *, h3{
+        text-align: center;
+        margin: 8px auto;
+    }
+
+    .videosection button{
+        display: none;
+    }
+
+    #video{
+        margin-top: 5%;
+    }
 }
